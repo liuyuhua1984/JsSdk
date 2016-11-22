@@ -67,6 +67,19 @@
 					    }
 					});
 					
+					wx.onMenuShareTimeline({
+					    title: '中国你好', // 分享标题
+					    link: 'http://www.cnblogs.com/txw1958/p/weixin-development-best-practice.html', // 分享链接
+					    imgUrl: 'http://images.cnitblog.com/i/340216/201404/301756448922305.jpg', // 分享图标
+					    success: function () { 
+					        // 用户确认分享后执行的回调函数
+					        alert("分享成功");
+					    },
+					    cancel: function () { 
+					        // 用户取消分享后执行的回调函数
+					    }
+					});
+					
 				});
 			},
 
