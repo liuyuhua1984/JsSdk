@@ -54,9 +54,7 @@
 				});
 
 				wx.ready(function () {
-					
-					alert("我是对的!");
-					wx.checkJsApi({
+					/***wx.checkJsApi({
 					    jsApiList: [
 					        'getLocation',
 					        'onMenuShareTimeline',
@@ -65,21 +63,22 @@
 					    success: function (res) {
 					        alert(JSON.stringify(res));
 					    }
-					});
+					});**/
+					
 					
 					wx.onMenuShareTimeline({
-					    title: '中国你好', // 分享标题
-					    link: 'http://www.cnblogs.com/txw1958/p/weixin-development-best-practice.html', // 分享链接
-					    imgUrl: 'http://images.cnitblog.com/i/340216/201404/301756448922305.jpg', // 分享图标
+					    title: '微信分享', // 分享标题
+					    link: "http://www.cnblogs.com/txw1958/p/weixin-development-best-practice.html", // 分享链接
+					    imgUrl: "http://images.cnitblog.com/i/340216/201404/301756448922305.jpg", // 分享图标
 					    success: function () { 
 					        // 用户确认分享后执行的回调函数
 					        alert("分享成功");
 					    },
 					    cancel: function () { 
 					        // 用户取消分享后执行的回调函数
+					    	 alert("分享取消");
 					    }
 					});
-					
 				});
 			},
 
@@ -89,10 +88,28 @@
 			}
 		});
 	}
+	
+	function  callOnMenuShareTimeline(){
+		wx.onMenuShareTimeline({
+		    title: '微信分享', // 分享标题
+		    link: "http://www.cnblogs.com/txw1958/p/weixin-development-best-practice.html", // 分享链接
+		    imgUrl: "http://images.cnitblog.com/i/340216/201404/301756448922305.jpg", // 分享图标
+		    success: function () { 
+		        // 用户确认分享后执行的回调函数
+		        alert("分享成功");
+		    },
+		    cancel: function () { 
+		        // 用户取消分享后执行的回调函数
+		    	 alert("分享取消");
+		    }
+		});
+	}
 </script>
 
 </head>
 
-<body>他
+<body>
+这个有什么呢--------------------
+	<!--  <button onclick="callOnMenuShareTimeline()">按下吧</button>-->
 </body>
 </html>
