@@ -22,8 +22,8 @@ import com.json.data.JsSdkData;
  * @version
  */
 public class Sign {
-	public static String APPID = "wx7b7e0a7b05bc6fcb";
-	public static String APPSECRET = "fa35469a90c8d69f98f24a041fd67376";
+	public static String APPID = "xxxxxxx";
+	public static String APPSECRET = "xxxxxxxx";
 
 	public static void main(String[] args) {
 		String jsapi_ticket = "jsapi_ticket";
